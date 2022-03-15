@@ -1,4 +1,4 @@
-"""TEST"""
+"""FLASK APP"""
 import os
 from flask import Flask
 
