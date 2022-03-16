@@ -11,12 +11,12 @@ for file in files:
     with open(file) as f:
         for lineno, line in enumerate(f.readlines()):
             if re.search(pattern, line):
-                secrets.append((line, lineno))
+                secrets.append((line, lineno, file))
 
 if len(secrets) > 0:
     print('SECRETS FOUND: ')
     for secret in secrets:
-        print(f'line {secret[1]}:\t{secret[0]}')
+        print(f'line {secret[1]} in {secret[2]}:\t{secret[0]}')
 
 else:
     print('No secrets found in your python files.')
