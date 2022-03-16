@@ -12,15 +12,17 @@ In short, Dockerise and deploy a flask 'hello world' app with CI/CD workflow to 
 ## Stage 1
 > *Dockerize a simple Hello World Flask Application which responds with a message that is set up as an environment variable and deploy the docker image to AWS ECR.*
 
-Done using the Dockerfile
+[Dockerfile](Dockerfile)
 
 ## Stage 2
 > *Develop a CI/CD pipeline(Github Actions/Jenkins or your own choice) which would lint the python code and push the updated image to ECR.* <br />This repo has pylint CI workflow on Actions for python versions >= 3.8
 
+Defined in [the lint workflow](.github/workflows/pylint.yml)
+
 ## Stage 3
 > *Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.*<br />*Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
 
-Workflow defined in aws.yml builds the image and pushes it to ECR repo and deploys onto an ECS service
+Workflow defined in [the aws workflow](.github/workflows/aws.yml) builds the image and pushes it to ECR repo and deploys onto an ECS service
 
 The deployed container is currently deployed and is running on [18.116.48.65](http://18.116.48.65:5000/)
 
