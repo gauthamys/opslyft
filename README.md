@@ -8,7 +8,7 @@
 - [x] Bonus: CI to check code quality
 
 ## Stage 1
-*Dockerize a simple Hello World Flask Application which responds with a message that is set up as an environment variable and deploy the docker image to AWS ECR.
+*Dockerize a simple Hello World Flask Application which responds with a message that is set up as an environment variable and deploy the docker image to AWS ECR.*
 
 Done using the Dockerfile
 
@@ -18,7 +18,8 @@ Done using the Dockerfile
 This repo has pylint CI workflow on Actions for python versions >= 3.8
 
 ## Stage 3
-*Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.
-*Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.
+*Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.*
+
+*Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
 
 Workflow defined in aws.yml builds the image and pushes it to ECR repo and deploys onto an ECS service
