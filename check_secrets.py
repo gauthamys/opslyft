@@ -3,7 +3,7 @@ import re
 import sys
 
 files = sys.argv[1:]
-PATTERN = r'[a-z0-9_]*KEY=[a-zA-Z0-9]*'
+PATTERN = r'[a-zA-Z0-9_]*KEY=[a-zA-Z0-9]*'
 
 secrets = []
 
