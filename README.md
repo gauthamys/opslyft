@@ -24,5 +24,13 @@ This repo has pylint CI workflow on Actions for python versions >= 3.8
 
 Workflow defined in aws.yml builds the image and pushes it to ECR repo and deploys onto an ECS service
 
-
 The deployed container is currently deployed and is running on [18.116.48.65](http://18.116.48.65:5000/)
+
+# Summary
+- There are 3 defined workflows
+    - Deploy to ECS (triggered on any push to the repo except on readme file) 
+    <br /> *builds docker image from root directory, pushes it to ECR and uses the image to deploy on ECS* <br />
+    - Pylint (triggered on all pushes that change or create python files) <br />
+        Lints the python code, exits with a non-zero value on any lint score < 10 <br />
+    - Check for Secrets (triggered on all pushes that change or create python files, except the code that does the checking for secrets [/check_secrets.py]) <br />
+        Code is checked for explicit secrets such as api keys or secrets by the driver code in [/check_secrets.py],rexits with a non zero value if secrets are found.
