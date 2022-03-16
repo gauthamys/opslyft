@@ -9,27 +9,22 @@
         "logDriver": "awslogs",
         "secretOptions": null,
         "options": {
-          "awslogs-group": "/ecs/opslyft",
+          "awslogs-group": "/ecs/opslyft-app",
           "awslogs-region": "us-east-2",
           "awslogs-stream-prefix": "ecs"
         }
       },
-      "entryPoint": [
-        "sh",
-        "-c"
-      ],
+      "entryPoint": [],
       "portMappings": [
         {
-          "hostPort": 80,
+          "hostPort": 5000,
           "protocol": "tcp",
-          "containerPort": 80
+          "containerPort": 5000
         }
       ],
-      "command": [
-        "/bin/sh -c \"echo '<html> <head> <title>Amazon ECS Sample App</title> <style>body {margin-top: 40px; background-color: #333;} </style> </head><body> <div style=color:white;text-align:center> <h1>Amazon ECS Sample App</h1> <h2>Congratulations!</h2> <p>Your application is now running on a container in Amazon ECS.</p> </div></body></html>' >  /usr/local/apache2/htdocs/index.html && httpd-foreground\""
-      ],
+      "command": [],
       "linuxParameters": null,
-      "cpu": 256,
+      "cpu": 0,
       "environment": [],
       "resourceRequirements": null,
       "ulimits": null,
@@ -39,10 +34,10 @@
       "secrets": null,
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": 512,
+      "memoryReservation": 128,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "httpd:2.4",
+      "image": "936615151120.dkr.ecr.us-east-2.amazonaws.com/opslyft:6bc92d7ea5f32b0b72084a9d8a96d4adc616927d",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -59,7 +54,7 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "opslyft-app"
+      "name": "opslyft"
     }
   ],
   "placementConstraints": [],
@@ -69,8 +64,8 @@
     "EC2",
     "FARGATE"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-2:936615151120:task-definition/opslyft:1",
-  "family": "opslyft",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-2:936615151120:task-definition/opslyft-app:1",
+  "family": "opslyft-app",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -88,6 +83,12 @@
       "targetId": null,
       "targetType": null,
       "value": null,
+      "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
     },
     {
@@ -95,6 +96,12 @@
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "ecs.capability.execution-role-ecr-pull"
     },
     {
       "targetId": null,
