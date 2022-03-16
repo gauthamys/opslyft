@@ -1,2 +1,2 @@
 '''test with induced secret'''
-API_KEY='dummykey1029190'
+API_KEY = 'dummy-key_1029190'
