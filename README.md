@@ -24,7 +24,7 @@ Defined in [the lint workflow](.github/workflows/pylint.yml)
 
 Workflow defined in [the aws workflow](.github/workflows/aws.yml) builds the image and pushes it to ECR repo and deploys onto an ECS service
 
-The deployed container is currently deployed and is running on [18.116.48.65](http://18.116.48.65:5000/)
+The deployed container is currently deployed and is running on [3.145.177.160](http://3.145.177.160:5000/)
 
 # Summary
 ### There are 3 defined workflows
