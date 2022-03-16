@@ -33,4 +33,4 @@ The deployed container is currently deployed and is running on [3.145.177.160](h
 2. Pylint (triggered on all pushes that change or create python files) <br />
   - *Lints the python code, exits with a non-zero value on any lint score < 10* <br />
 3. Check for Secrets (triggered on all pushes that change or create python files, except the code that does the checking for secrets [./check_secrets.py](check_secrets.py)) <br />
-  - *Code is checked for explicit secrets such as api keys or secrets by the driver code in* [./check_secrets.py](check_secrets.py),rexits with a non zero value if secrets are found.* <br />
+  - *Code is checked for explicit secrets such as api keys or secrets by the driver code in* [./check_secrets.py](check_secrets.py), exits with a non zero value if secrets are found.* <br />
