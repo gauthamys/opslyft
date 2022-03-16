@@ -18,9 +18,7 @@ Done using the Dockerfile
 > *Develop a CI/CD pipeline(Github Actions/Jenkins or your own choice) which would lint the python code and push the updated image to ECR.* <br />This repo has pylint CI workflow on Actions for python versions >= 3.8
 
 ## Stage 3
-> *Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.*
-
-> *Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
+> *Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.*<br />*Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
 
 Workflow defined in aws.yml builds the image and pushes it to ECR repo and deploys onto an ECS service
 
