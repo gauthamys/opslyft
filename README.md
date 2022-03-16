@@ -23,3 +23,6 @@ This repo has pylint CI workflow on Actions for python versions >= 3.8
 *Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
 
 Workflow defined in aws.yml builds the image and pushes it to ECR repo and deploys onto an ECS service
+
+
+The deployed container is currently deployed and is running on [18.221.232.136](http://18.221.232.136:5000/)
