@@ -7,6 +7,8 @@
 - [x] Bonus: Configure ECS for auto-scaling and load balancing
 - [x] Bonus: CI to check code quality
 
+In short, Dockerise and deploy a flask 'hello world' app with CI/CD workflow to deploy and check code quality and secrets
+
 ## Stage 1
 *Dockerize a simple Hello World Flask Application which responds with a message that is set up as an environment variable and deploy the docker image to AWS ECR.*
 
