@@ -13,7 +13,7 @@
 Done using the Dockerfile
 
 ## Stage 2
-*Develop a CI/CD pipeline(Github Actions/Jenkins or your own choice) which would lint the python code and push the updated image to ECR.
+*Develop a CI/CD pipeline(Github Actions/Jenkins or your own choice) which would lint the python code and push the updated image to ECR.*
 
 This repo has pylint CI workflow on Actions for python versions >= 3.8
 
