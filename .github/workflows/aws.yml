@@ -36,7 +36,7 @@ env:
   ECR_REPOSITORY: opslyft           # set this to your Amazon ECR repository name
   ECS_SERVICE: opslyft                 # set this to your Amazon ECS service name
   ECS_CLUSTER: opslyft                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: .aws/TASK_DEFINITION.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: task-definition.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: opslyft-app           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
@@ -88,4 +88,4 @@ jobs:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: ${{ env.ECS_SERVICE }}
         cluster: ${{ env.ECS_CLUSTER }}
-        wait-for-service-stability: true
+        wait-for-service-stability: false
