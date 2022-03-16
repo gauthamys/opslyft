@@ -1,6 +1,6 @@
 # OpsLyft Assignment 1
 
-- [x] Dockerized a flask application and pushed to AWS ECR
+- [x] Dockerized a flask hello-world application that takes message from an env variable and pushes it to AWS ECR
 - [x] Set up a CI workflow (on this repository) that runs pylint on the python files in this repo on any push 
 - [x] Setup a CD workflow to deploy the given image onto ECS on EC2 or fargate
 - [x] Bonus: Check if code has secrets in CI pipeline
