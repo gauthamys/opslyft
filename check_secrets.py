@@ -18,7 +18,7 @@ if len(secrets) > 0:
     print('SECRETS FOUND: ')
     for secret in secrets:
         print(f'line {secret[1]} in {secret[2]}:\t{secret[0]}')
-    exit(20)
+    sys.exit(20)
 
 else:
     print('No secrets found in your python files.')
