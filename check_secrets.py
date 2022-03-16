@@ -3,14 +3,14 @@ import re
 import sys
 
 files = sys.argv[1:]
-pattern = r'[a-z0-9_]*KEY=[a-zA-Z0-9]*'
+PATTERN = r'[a-z0-9_]*KEY=[a-zA-Z0-9]*'
 
 secrets = []
 
 for file in files:
-    with open(file) as f:
+    with open(file, encoding='utf-8') as f:
         for lineno, line in enumerate(f.readlines()):
-            if re.search(pattern, line):
+            if re.search(PATTERN, line):
                 secrets.append((line, lineno, file))
 
 if len(secrets) > 0:
