@@ -22,7 +22,7 @@ Defined in [the lint workflow](.github/workflows/pylint.yml)
 ## Stage 3
 > *Please create a Github repository with the application code, Dockerfile and the CI/CD workflows.*<br />*Bonus: ECS could be configured for autoscaling and/or load-balancing. CI pipeline could check the code quality or are there any secrets in the code.*
 
-Workflow defined in [the aws workflow](.github/workflows/aws.yml) builds the image and pushes it to ECR repo and deploys onto an ECS service
+Workflow defined in [the aws workflow](.github/workflows/aws.yml) builds the image and pushes it to ECR repo and deploys onto an ECS service which is configured for load balancing as well
 
 The container is currently deployed and is running on [13.58.199.22](http://13.58.199.22:5000/)
 
